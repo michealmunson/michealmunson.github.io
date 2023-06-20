@@ -1,18 +1,15 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: About Me
+permalink: /about-me/
 ---
+<p align="center">
+  <img src="/about_pic.jpg" alt="about pic" style="height: 250px; width: 375px;"/>
+</p>
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+My name is Micheal and I'm currently working at [Athelas](https://www.athelas.com/). Our aim is to decentralize lab tests and abstract away revenue management for practices. I currently work in R&D for our point-of-care blood diagnostic and product implementations for our revenue management product.
+  
+  I have had a deep interest in healthcare ever since my dad broke his neck rendering him paralyzed from the neck down. My work has spanned from remote health monitoring to underlying cell signaling pathways.
+  
+# About This Site
+This site is powered by [Jekyll](https://github.com/jekyll/jekyll) using the [minima](https://github.com/jekyll/minima) theme.
