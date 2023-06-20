@@ -12,4 +12,4 @@ My name is Micheal and I'm currently working at [Athelas](https://www.athelas.co
   I have had a deep interest in healthcare ever since my dad broke his neck rendering him paralyzed from the neck down. My work has spanned from remote health monitoring to underlying cell signaling pathways.
   
 # About This Site
-This site is powered by [Jekyll](https://github.com/jekyll/jekyll) using the [minima](https://github.com/jekyll/minima) theme.
+This site is powered by [Jekyll](https://jekyllrb.com/) using the [minima](https://github.com/jekyll/minima) theme.
