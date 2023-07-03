@@ -76,9 +76,9 @@ So, to calculate the sample size, we need to do the following:
 
 1. Determine what probability (or confidence), *p*, we want to have when estimating the average
 2. Determine the difference between our estimate and the actual population, $D$, we can allow
-3. Solve for n using $z_{p}*\sigma_\bar{x}$
+3. Solve for *n* using $z_{p}*\sigma_\bar{x}$
 
-To solve for n, just set $z_{p}*\sigma_\bar{x}$ equal to the difference you'll allow between your estimate and the true mean.
+To solve for *n*, just set $z_{p}*\sigma_\bar{x}$ equal to the difference you'll allow between your estimate and the true mean.
 
 $$z_{p}*\sigma_\bar{x} = \frac{z_{p}*\sigma}{\sqrt{n}} = D$$
 
@@ -86,35 +86,45 @@ $$\sqrt{n} = \frac{z_{p}*\sigma}{D}$$
 
 $$n = (\frac{z_{p}*\sigma}{D})^2$$
 
-and voila! You can now calculate n for any probability *p* and difference $D$ your heart desires!
+and voila! You can now calculate *n* for any probability *p* and difference $D$ your heart desires!
 
 
 **What the true distribution is in the story**
 
 Okay, as said above, and said again here - the protagonist's goal is to find out what the mean of the million numbers is in the bag. As the reader, you should know that the mean and hence the answer is **70**. And to take it up a notch, the standard deviation of the numbers is 10, and here's what the million numbers actually look like.
 
-{% highlight r %}
-df <- as.data.frame(rnorm(1e6, 70, 10)) # generate the million random numbers
-colnames(df)[1] <- "x"
-ggplot(data = df) +
-  geom_histogram(mapping = aes(x),
-                 alpha = 0.3,
-                 fill = 'green',
-                 color = 'black',
-                 linewidth = 0.1,
-                 binwidth = 2
-                 ) +
-  geom_freqpoly(mapping = aes(x),
-                binwidth = 2
-                ) +
-  ggtitle('Histogram of the million numbers') +
-  ylab('Frequency of numbers') +
-  xlab('The numbers') +
-  theme_light() # plot the million random numbers
+{% highlight python %}
+def clean_hist():
+  ...
+
+# generate samples
+mu, sigma, n = 70, 10, int(1e6)
+x = np.random.normal(mu, sigma, n) 
+
+# plot the samples on a histogram
+fig, axs = plt.subplots(figsize = (10,10),
+                        tight_layout = True)
+
+n, bins, patches = plt.hist(x,
+                            bins = 30,
+                            density = True,
+                            alpha = 0.5)
+
+y = ((1 / (np.sqrt(2 * np.pi) * sigma)) *
+     np.exp(-0.5 * (1 / sigma * (bins - mu))**2))
+
+plt.plot(bins,
+         y,
+         '--',
+         color = 'black')
+
+clean_hist()
+
+plt.show()
 {% endhighlight %}
 
 <p align="center">
-  <img src="/million-numbers.jpeg" alt="million pic" style="height: 500px; width: 700px;"/>
+  <img src="/million-numbers.png" alt="million pic" style="height: 500px; width: 500px;"/>
 </p>
 
 # The story
@@ -125,22 +135,30 @@ Damn, you think to yourself. This guys a lunatic... but you don't want this pati
 
 You put your hand in the bag, grab 10 numbers, and calculate their average.
 
-{% highlight r %}
-x <- round(rnorm(10, 70, 10), 0) # represents you grabbing 10 numbers
-mean(x) # represents you calculating the average
+{% highlight python %}
+# represents you grabbing the 10 samples
+mu, sigma, n = 70, 10, 10
+x = np.random.normal(mu, sigma, n) 
+
+# represents you calculating the mean
+np.mean(x)
 {% endhighlight %}
-{% highlight r %}
+{% highlight python %}
  [1] 71 68 73 66 73 71 71 74 69 66 # what those 10 numbers were
  [2] 70.2 # what the average was
 {% endhighlight %}
 
 Ok - the average of these numbers is 70.2. You're not confident in telling the doc this - *of course*!  You have no idea how good of an estimate that actually is. All you know is that there's a million numbers in that bag, you grabbed 10, and the average was 70.2. What if you just got unlucky and grabbed some numbers that didn't represent the million in the bag at all? You decide to do it again. Hand in the bag. Grab the numbers.
 
-{% highlight r %}
-x <- round(rnorm(10, 70, 10), 0) # grab another 10
-mean(x) # calculate the average
+{% highlight python %}
+# represents you grabbing the 10 samples
+mu, sigma, n = 70, 10, 10
+x = np.random.normal(mu, sigma, n) 
+
+# represents you calculating the mean
+np.mean(x)
 {% endhighlight %}
-{% highlight r %}
+{% highlight python %}
  [1] 68 68 72 50 63 73 64 64 63 67 # the 10 numbers
  [2] 65.2 # the new average
 {% endhighlight %}
@@ -153,24 +171,27 @@ To find the answer to this question, we need to figure out some other things. Fi
 
 You ask the doc if he has any idea. He tells you has no idea and you decide the man is useless. You look at the 20 numbers you first pulled and plot them on a histogram.
 
-{% highlight r %}
-71 68 73 66 73 71 71 74 69 66 68 68 72 50 63 73 64 64 63 67 # looking at the 20 numbers
-ggplot(data = df) +
-  geom_histogram(mapping = aes(x),
-                 alpha = 0.3,
-                 fill = 'green',
-                 color = 'black',
-                 linewidth = 0.1,
-                 binwidth = 2
-                 ) +
-  ggtitle('Histogram of the 20 numbers you pulled') +
-  ylab('Frequency of numbers') +
-  xlab('The numbers') +
-  theme_light() # plot the 20 numbers
+{% highlight python %}
+def clean_hist():
+  ...
+
+# Represents you looking at the 20 numbers
+x = [71,68,73,66,73,71,71,74,69,66,68,68,72,50,63,73,64,64,63,67]
+
+# Plotting the 20 numbers on a histogram
+fig, axs = plt.subplots(figsize = (10,10),
+                        tight_layout = True)
+
+n, bins, patches = plt.hist(x,
+                            alpha = 0.5)
+
+clean_hist()
+
+plt.show()
 {% endhighlight %}
 
 <p align="center">
-  <img src="/first-20.jpeg" alt="first 20" style="height: 500px; width: 700px;"/>
+  <img src="/20-numbers.png" alt="first 20" style="height: 500px; width: 500px;"/>
 </p>
 
 Alright you tell yourself. Nearly half (8 of the 20) numbers are between 70 and 75. And the next largest bin is between 65 and 70 (6 out of the 20 numbers). There are a couple that are between 50 and 65. So 70% of the numbers are between 65 and 70. 
