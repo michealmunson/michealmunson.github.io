@@ -2,7 +2,9 @@
 layout: page
 title: About Me
 permalink: /about-me/
+order: 4
 ---
+
 <p align="center">
   <img src="/about_pic.jpg" alt="about pic" style="height: 250px; width: 375px;"/>
 </p>
