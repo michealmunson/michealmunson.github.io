@@ -198,15 +198,36 @@ Alright you tell yourself. Nearly half (8 of the 20) numbers are between 70 and 
 
 Upon this realization, you know one thing. Your hypothesis that the million numbers in the bag is simply just the sequence of numbers from 1 to a million is out the door. You can see that you've pulled 71 three times in the same grab, so there are repeats in that bag. If that wasn't enough, of the 20 you pulled, all 20 only represented the first 0.01% of all numbers between 1 and a million. Very unlikely.
 
-Okay - if you we're to bet anything on what those million numbers looked like, you'd probably say that most of them are under a hundred (*just based off the information given*). You aren't entirely sure, but your 20 samples say so. Regardless, you have a rough idea of how those numbers vary. 
+Okay - if you we're to bet anything on what those million numbers looked like, you'd probably say that most of them are under a hundred (*just based off the information given*). You aren't entirely sure, but your 20 samples say so. 
 
-You have 2 options now - the you-did-your-best-so-get-home-as-soon-as-possible option and the i-have-all-the-time-in-the-world option. The first option means you get to calculating right away. The second option means you collect more data to get an even more accurate depiction of how those million numbers vary. You promised your date you'd be ready by 5:30 so you opt for the first option. Twenty samples is good enough for you.*
+You have 2 options now - the *you-did-your-best-so-get-home-as-soon-as-possible* option and the *i-have-all-the-time-in-the-world* option. The first option means you get to calculating right away. The second option means you collect more data to get an even more accurate depiction of how those million numbers vary. The truth of the matter is - you don't even have all day. You have a date scheduled at 6 o'clock and you're not the type to make bad first impressions. Twenty samples is good enough for you.*
 
-{%highlight r%}
-*Note that this may NOT be the 20 samples you're going to use to estimate the mean of the population. These 20 numbers are simply being used for you to understand the variance of those numbers. You'll see why this is important shortly.
+
+* *NOTE: This is just the samples you took to have an understanding of the population of numbers you're drawing from. This is **not** the samples you're going to take to determine the average. In a practical setting, you ought to have some expert who knows how the numbers should vary. If you don't, like in this setting, then taking some samples to get an understanding of the variance will do.
+
+You estimate the population's standard deviation with the following calculation
+
+$$\sqrt{\frac{ \sum_{i=0}^{19}(x_i - \bar{x})^2}{n-1}}$$
+
+{%highlight python%}
+x = [71,68,73,66,73,71,71,74,69,66,68,68,72,50,63,73,64,64,63,67]
+s1 = np.std(x) # Represents you calculating the standard deviation
 {%endhighlight%}
 
+The standard deviation was **5.33**, and thats what you're gonna run with. You now need to figure out the following 2 things:
 
+1. With what confidence (or probability) do you want your estimate to be correct?
+2. With that probability of being right, what error in your estimate are you willing to accept? In other words, whats the largest difference between your estimate and the true mean won't hurt the patient?
+
+You look at the doc. He stares back angry and expecting an answer. You decide just to get as close to actual estimate as possible.
+
+Okay, so assuming the standard deviation of those numbers in the bag is 5.33, you decide that you want to be within 1 unit of the actual mean 99% of the time. In other words, if you grabbed this sample size 100 times, 99 out of the 100 times you'd be within 1 unit of the actual mean.
+
+You use the following equation
+
+$$n = (\frac{z_{p}*\sigma}{D})^2 = (\frac{z_{0.995}*5.33}{1})^2 = (\frac{2.576*5.33}{1})^2 \approx 189$$
+
+189 numbers need to be collected if you want to estimate the true mean within 1 unit. You go ahead and do that. 
 
 
 
