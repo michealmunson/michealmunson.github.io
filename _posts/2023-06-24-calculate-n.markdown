@@ -205,7 +205,7 @@ You have 2 options now - the *you-did-your-best-so-get-home-as-soon-as-possible*
 
 * *NOTE: This is just the samples you took to have an understanding of the population of numbers you're drawing from. This is **not** the samples you're going to take to determine the average. In a practical setting, you ought to have some expert who knows how the numbers should vary. If you don't, like in this setting, then taking some samples to get an understanding of the variance will do.
 
-You estimate the population's standard deviation with the following calculation
+You estimate the population's standard deviation by calculating the sample standard deviation
 
 $$\sqrt{\frac{ \sum_{i=0}^{19}(x_i - \bar{x})^2}{n-1}}$$
 
@@ -227,7 +227,25 @@ You use the following equation
 
 $$n = (\frac{z_{p}*\sigma}{D})^2 = (\frac{z_{0.995}*5.33}{1})^2 = (\frac{2.576*5.33}{1})^2 \approx 189$$
 
-189 numbers need to be collected if you want to estimate the true mean within 1 unit. You go ahead and do that. 
+189 numbers need to be collected if you want to estimate the true mean within 1 unit. You go ahead and do that and calculate the mean
+
+{%highlight python%}
+x = (np.random.randn(int(1e6)))*10 + 70
+
+# represents you grabbing the 189 numbers out of the bag
+sample = []
+for i in range(189):
+    sample += [x[i]]
+
+# represents you calculating their average
+np.mean(sample)
+{%endhighlight%}
+
+The average of these 189 numbers was **69.85**. You do it once more for good measure and the average this time was **70.07**. Your feeling good about this and just tell the doc your first calculation, 69.85 units. Thats the dose you should give your patient you insaniac. The doctor looks at you with a skeptical brow. He doesn't seem to trust you. You throw your hands up and retort with thats all you got. Anxious to prescribe this patient the medication she needs, the doctor prescribes her 69.85 units of the medication to take twice a week.
+
+A few months goes by. The date went well and you actually moved in with your starry-eyed lover. On occasion you thought of the psychotic dilemma that physician coerced you in. You've told no one yet. You get an anonymous phone call and hear that familiar doc's voice. He tells you that the patient would've only been okay if you we're within 1 unit of the true mean in the bag. Your heart races. A few beats later, he tides the nerves by letting you know she's just fine.
+
+You were correct this time. The question is, were you really going be within 1 unit of the true mean 99% of the time... or did you just get lucky?
 
 
 
