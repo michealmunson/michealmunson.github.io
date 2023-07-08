@@ -39,10 +39,10 @@ Enjoy!
 **What highlights mean**
 
 Any time you see a box like
-{% highlight r %}
+{% highlight python %}
 this
 {% endhighlight %}
-know that its a simulation that the reader is aware of, but the protagonist isn't. It's snippet of R code to help us model what probabilistic phenomenon is actually happening whenever the protagonist acts.
+know that its a simulation that the reader is aware of, but the protagonist isn't. It's snippet of code to help us model what probabilistic phenomenon is actually happening whenever the protagonist acts.
 
 **Mathematical theory**
 
@@ -241,7 +241,7 @@ for i in range(189):
 np.mean(sample)
 {%endhighlight%}
 
-The average of these 189 numbers was **69.85**. You do it once more for good measure and the average this time was **70.07**. Your feeling good about this and just tell the doc your first calculation, 69.85 units. You tell the insaniac that thats the dose he should give to his patient. The doctor looks at you with a skeptical brow. He doesn't seem to trust you. You throw your hands up and retort with thats all you got. Anxious to prescribe this patient the medication she needs, the doctor prescribes her 69.85 units of the medication to take twice a week.
+The average of these 189 numbers was **69.85**. You do it once more for good measure and the average this time was **70.07**. You're feeling good about this and just tell the doc your first calculation, 69.85 units. You tell the insaniac that thats the dose he should give to his patient. The doctor looks at you with a skeptical brow. He doesn't seem to trust you. You throw your hands up and retort with thats all you got. Anxious to prescribe this patient the medication she needs, the doctor prescribes her 69.85 units of the medication to take twice a week.
 
 A few months goes by. The date went well and you actually moved in with your starry-eyed lover. On occasion you thought of the psychotic dilemma that physician coerced you in. You've told no one yet. You get an anonymous phone call and hear that familiar voice. He tells you that the patient would've only been okay if you we're within 1 unit of the true mean in the bag like you had said. Your heart races. A few beats later, he tides the nerves by letting you know she's just fine.
 
