@@ -241,15 +241,23 @@ for i in range(189):
 np.mean(sample)
 {%endhighlight%}
 
-The average of these 189 numbers was **69.85**. You do it once more for good measure and the average this time was **70.07**. Your feeling good about this and just tell the doc your first calculation, 69.85 units. Thats the dose you should give your patient you insaniac. The doctor looks at you with a skeptical brow. He doesn't seem to trust you. You throw your hands up and retort with thats all you got. Anxious to prescribe this patient the medication she needs, the doctor prescribes her 69.85 units of the medication to take twice a week.
+The average of these 189 numbers was **69.85**. You do it once more for good measure and the average this time was **70.07**. Your feeling good about this and just tell the doc your first calculation, 69.85 units. You tell the insaniac that thats the dose he should give to his patient. The doctor looks at you with a skeptical brow. He doesn't seem to trust you. You throw your hands up and retort with thats all you got. Anxious to prescribe this patient the medication she needs, the doctor prescribes her 69.85 units of the medication to take twice a week.
 
-A few months goes by. The date went well and you actually moved in with your starry-eyed lover. On occasion you thought of the psychotic dilemma that physician coerced you in. You've told no one yet. You get an anonymous phone call and hear that familiar doc's voice. He tells you that the patient would've only been okay if you we're within 1 unit of the true mean in the bag. Your heart races. A few beats later, he tides the nerves by letting you know she's just fine.
+A few months goes by. The date went well and you actually moved in with your starry-eyed lover. On occasion you thought of the psychotic dilemma that physician coerced you in. You've told no one yet. You get an anonymous phone call and hear that familiar voice. He tells you that the patient would've only been okay if you we're within 1 unit of the true mean in the bag like you had said. Your heart races. A few beats later, he tides the nerves by letting you know she's just fine.
 
-You were correct this time. The question is, were you really going be within 1 unit of the true mean 99% of the time... or did you just get lucky?
+You were correct this time. The question is, were you really going be within 1 unit of the true mean 99% of the time... or did you just get lucky? You may never know.
 
+At this point the story is over. However, simply out of interest, lets calculate what percent of the time you would've been within 1 unit of the mean with the sample size the character drew, 189. To do this, just simply re-arrange the above equation to calculate the sample size, and we want to find the z-score given a sample size of 189, a standard deviation of 10, and  
 
+$$ \frac{\sqrt{189}}{10} = z_{p}  \approx 1.37$$
 
+Then plug $z_{p}$ into the probability function of the standard normal shown above
 
+$$\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{1.37} e^{-1.37^{2}/2}dx \approx 0.9147$$
+
+So, in this case, drawing samples of 189 from that bag would've yielded a sample mean within the true mean of the bag 91% of the time - not 99% like the character had thought. This is simply a function of the estimate for the standard deviation of the population. The actual standard deviation was 10 but the character had assumed 5.33. If the character had collected a larger sample size, or the doctor had some information to share (for example whats the lowest and highest number in the bag), better estimates for the standard deviation could have been made. However, this often emulates what happens practically for anyone needing to collect samples to make an estimate about a population. Its all just estimation. It's a hell of a lot better than blindly guessing, but like blind guessing, it still has error involved.
+
+This lunatic might have costed you some time - but hopefully taught an important lesson in sample collection and experiment design.
 
 
 
