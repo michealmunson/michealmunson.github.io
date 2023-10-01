@@ -2,7 +2,7 @@
 layout: page
 title: About Me
 permalink: /about-me/
-order: 4
+order: 99
 ---
 
 <p align="center">
