@@ -18,7 +18,7 @@ This page is dedicated to every adipocyte, every myocyte, every neuron, and the 
 
 Below is a series of posts dedicated towards unraveling the mores of nutrition. I've done my best to avoid injecting any un-warned bias concerning the topic at hand. The information therefore should be founded in studies and largely affirmed to be true. If not, I will predicate the information confirming that the following is conjecture.
 
-# Protein Series
+## Protein Series
 
 Undoubtedly, most cursorily understand that proteins play an important role in our daily lives and that we need to eat some defined amount on a regular basis. But the knowledge concerning protein and our diet both starts and ends there. An abundance of questions still remain. How much protein do we eat? What exactly is happening when we eat protein? Does the protein source we eat matter?
 

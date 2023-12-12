@@ -6,7 +6,7 @@ categories: Love
 
 *<font size="-1">To read the actual text, there are a lot of free sources online like this one (https://classics.mit.edu/Plato/symposium.html). I read R. Allen's translation, a pdf available online.</font>*
 
-## Summary
+## Notes
 <p>0. Context</p>
 <font size="-1">
 <p>
