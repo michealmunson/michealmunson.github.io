@@ -2,7 +2,7 @@
 layout: page
 permalink: /Nutrition/
 title: On Nutrition
-order: 1
+order: 3
 ---
 
 <figure align = "center">

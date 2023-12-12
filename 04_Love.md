@@ -2,7 +2,7 @@
 layout: page
 permalink: /Love/
 title: On Love
-order: 1
+order: 4
 ---
 
 <font size ="-1">I've gotta take a little time / A little time to think things over / I better read between the lines / In case I need it when I'm older / This mountain, I must climb / Feels like a world upon my shoulders / Through the clouds, I see love shine / Keeps me warm as life grows colder / In my life, there's been heartache and pain / I don't know if I can face it again / Can't stop now, I've traveled so far / To change this lonely life / I wanna know what love is / I want you to show me / I wanna feel what love is / I know you can show me</font>

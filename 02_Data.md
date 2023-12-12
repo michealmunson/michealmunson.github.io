@@ -2,7 +2,7 @@
 layout: page
 permalink: /Data/
 title: On Data
-order: 1
+order: 2
 ---
 
 ## Introduction
