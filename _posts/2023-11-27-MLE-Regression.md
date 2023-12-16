@@ -53,7 +53,10 @@ $$
 \theta_e = (X^TX)^{-1}X^TY
 $$
 
+Very similar to the above logic, you can also produce a polynomial function ($$ y = \sum_{i=0}^{m}\theta^{T}x^i $$) using maximum likelihood estimation. This works because the polynomial function is linear in the parameters were trying to optimize for. It doesn't matter that inputs, $$x_i$$, are non-linear.
 ## Application
+
+Try to fit a regression model via mle to an exponentially increasing curve with a lot of data points. Remember that you can fit a (n-1)th polynomial to n data points.
 
 In this case, I gathered some data concerning the temperatures and humidity at some timepoint in San Francisco.
 
