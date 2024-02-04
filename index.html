@@ -1,1 +1,97 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Biography</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f1e3; /* Light brown background */
+            color: #333; /* Dark text color */
+        }
+
+        main {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f7f1e3; /* Light brown background for the entire page */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center content */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        #profile-photo {
+            border-radius: 100%; /* Rounded profile photo */
+            max-width: 175px; /* Max width for the photo */
+            margin-bottom: 20px; /* Add spacing between photo and text */
+            border: 2px solid #d3cec6; /* Border color */
+        }
+
+        p {
+            color: #7c715e; /* Light brown text color */
+            text-align: justify;
+        }
+
+        /* Links styles */
+        .links-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            margin-bottom: 15px;
+        }
+
+        .link {
+            color: #7c715e; /* Light brown text color */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Casual font */
+            font-size: 16px;
+            border-radius: 10px; /* Rounded corners */
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease; /* Smooth color transition on hover */
+            margin-left: 10px;
+        }
+
+        .link:hover {
+            background-color: #d3cec6; /* Light brown background on hover */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- Profile Photo -->
+        <img id="profile-photo" src="me_photo.png" alt="Your Photo">
+
+        <!-- Biography Text -->
+        <p>
+            Welcome to my online abode! My name is Micheal and I was born in Bay Area, California. I'm interested in all things healthcare.
+            I particularly enjoy learning about any tools we have at our disposal to modulate how healthy we feel. These are often times based in 
+            nutrition, bio- / health-tech, psychology, and so forth. Please feel free to click through my blogs using the links on the upper right side of this webpage.
+        </p>
+
+        <p>
+            I currently work as a product operations manager at Athelas, a venture backed startup pushing the boundaries of modern healthcare. Prior to Athelas, 
+            I researched the immunological consequences of a variety of medications being re-purposed as COVID treatments as a Fulbright Scholar in England.
+            In college, I worked in 2 research labs where I validated a machine learning model capable of detecting eye cancer in baby photos and investigated
+            potential drug targets for pulmonary arterial hypertension.
+        </p>
+
+        <!-- Links Container -->
+        <div class="links-container">
+            <!-- Nutrient Nook Link -->
+            <a class="link" href="nutrient_nook.html">Nutrient Nook</a>
+
+            <!-- Bio-Based Tools Link -->
+            <a class="link" href="bio_based_tools.html">Bio-Based Tools</a>
+        </div>
+    </main>
+</body>
+
+</html>
+
+
