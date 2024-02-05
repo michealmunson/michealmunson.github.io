@@ -14,18 +14,17 @@
             color: #333; /* Dark text color */
         }
 
-        main {
+        .panel {
             max-width: 500px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #f7f1e3; /* Light brown background for the entire page */
+            background-color: #f7f1e3; /* Light brown background */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center; /* Center content */
+            text-align: center;
             border-radius: 10px; /* Rounded corners */
         }
 
         #profile-photo {
-            border-radius: 100%; /* Rounded profile photo */
             max-width: 175px; /* Max width for the photo */
             margin-bottom: 20px; /* Add spacing between photo and text */
             border: 2px solid #d3cec6; /* Border color */
@@ -34,6 +33,23 @@
         p {
             color: #7c715e; /* Light brown text color */
             text-align: justify;
+        }
+
+        .iframe-container {
+            max-width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-top: 20px;
+            padding-bottom: 56.25%; /* Aspect ratio for responsive iframe */
+        }
+
+        .iframe-container iframe {
+            border: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
         /* Links styles */
@@ -64,23 +80,6 @@
 
 <body>
     <main>
-        <!-- Profile Photo -->
-        <img id="profile-photo" src="me_photo.png" alt="Your Photo">
-
-        <!-- Biography Text -->
-        <p>
-            Welcome to my online abode! My name is Micheal and I was born in Bay Area, California. I'm interested in all things healthcare.
-            I particularly enjoy learning about any tools we have at our disposal to modulate how healthy we feel. These are often times based in 
-            nutrition, bio- / health-tech, psychology, and so forth. Please feel free to click through my blogs using the links on the upper right side of this webpage.
-        </p>
-
-        <p>
-            I currently work as a product operations manager at Athelas, a venture backed startup pushing the boundaries of modern healthcare. Prior to Athelas, 
-            I researched the immunological consequences of a variety of medications being re-purposed as COVID treatments as a Fulbright Scholar in England.
-            In college, I worked in 2 research labs where I validated a machine learning model capable of detecting eye cancer in baby photos and investigated
-            potential drug targets for pulmonary arterial hypertension.
-        </p>
-
         <!-- Links Container -->
         <div class="links-container">
             <!-- Nutrient Nook Link -->
@@ -89,9 +88,39 @@
             <!-- Bio-Based Tools Link -->
             <a class="link" href="bio_based_tools.html">Bio-Based Tools</a>
         </div>
+
+        <!-- summary panel -->
+        <div class="panel" contenteditable="true">
+            <h2>Micheal Munson</h2>
+                
+            <!-- Profile Photo -->
+            <img id="profile-photo" src="me_photo.png" alt="Your Photo">
+
+            <!-- Biography Text -->
+            <p>
+                Welcome to my online abode! I'm a Cali-born health enthusiast. I enjoy learning about any tools we have at our disposal to modulate how healthy we feel. These are often times based in 
+                nutrition, bio- / health-tech, psychology, and so forth. Please feel free to click through my blogs using the links on the upper right side of this webpage.
+            </p>
+
+            <p>
+                I currently work as a product ops manager at Athelas, a venture backed startup pushing the boundaries of modern healthcare. Prior to Athelas, 
+                I researched the immunological consequences of a variety of medications being re-purposed as COVID treatments as a Fulbright Scholar in England.
+                In college, I worked in 2 research labs where I validated a machine learning model capable of detecting eye cancer in baby photos and investigated
+                potential drug targets for pulmonary arterial hypertension.
+            </p>
+        </div>
+
+        <!-- Point-of-Care Platelet Counting to Better Manage Bleeding-Related Disorders -->
+        <div class="panel" contenteditable="true">
+            <h2>Point-of-Care Platelet Counting to Better Manage Bleeding-Related Disorders</h2>
+            <div class="iframe-container">
+                <iframe src="https://ashpublications.org/blood/article/142/Supplement%201/5453/505742/Design-and-Performance-of-a-Low-Cost-Portable" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
     </main>
 </body>
 
 </html>
+
 
 
