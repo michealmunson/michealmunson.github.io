@@ -15,17 +15,30 @@
         }
 
         .panel {
+            position: relative; /* Set .panel as the positioning context for .links-container */
             max-width: 500px;
             margin: 20px auto;
-            padding: 20px;
+            padding: 30px;
             background-color: #f7f1e3; /* Light brown background */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
             border-radius: 10px; /* Rounded corners */
         }
 
+        /* Links styles */
+        .links-container {
+            position: absolute;
+            top: 20px;
+            right: 250px;   
+        }
+
         #profile-photo {
             max-width: 175px; /* Max width for the photo */
+            margin-bottom: 20px; /* Add spacing between photo and text */
+            border: 2px solid #d3cec6; /* Border color */
+        }
+        #athelas-one {
+            max-width: 200px; /* Max width for the photo */
             margin-bottom: 20px; /* Add spacing between photo and text */
             border: 2px solid #d3cec6; /* Border color */
         }
@@ -52,14 +65,6 @@
             left: 0;
         }
 
-        /* Links styles */
-        .links-container {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            margin-bottom: 15px;
-        }
-
         .link {
             color: #7c715e; /* Light brown text color */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Casual font */
@@ -80,17 +85,18 @@
 
 <body>
     <main>
-        <!-- Links Container -->
-        <div class="links-container">
-            <!-- Nutrient Nook Link -->
-            <a class="link" href="nutrient_nook.html">Nutrient Nook</a>
-
-            <!-- Bio-Based Tools Link -->
-            <a class="link" href="bio_based_tools.html">Bio-Based Tools</a>
-        </div>
-
         <!-- summary panel -->
         <div class="panel" contenteditable="true">
+
+            <!-- Links Container -->
+            <div class="links-container">
+                <!-- Nutrient Nook Link -->
+                <a class="link" href="nutrient_nook.html">Nutrient Nook</a>
+
+                <!-- Bio-Based Tools Link -->
+                <a class="link" href="bio_based_tools.html">Bio-Based Tools</a>
+            </div>
+
             <h2>Micheal Munson</h2>
                 
             <!-- Profile Photo -->
@@ -98,8 +104,8 @@
 
             <!-- Biography Text -->
             <p>
-                Welcome to my online abode! I'm a Cali-born health enthusiast. I enjoy learning about any tools we have at our disposal to modulate how healthy we feel. These are often times based in 
-                nutrition, bio- / health-tech, psychology, and so forth. Please feel free to click through my blogs using the links on the upper right side of this webpage.
+                Welcome to my online abode! I'm a Cali-born health enthusiast. I love fitness, food, and learning about any tools we have at our disposal to modulate how healthy we feel. These are often times based in 
+                nutrition, bio- / health-tech, psychology, and so forth. Please feel free to click through my blogs on nutrition or biotech.
             </p>
 
             <p>
@@ -108,14 +114,20 @@
                 In college, I worked in 2 research labs where I validated a machine learning model capable of detecting eye cancer in baby photos and investigated
                 potential drug targets for pulmonary arterial hypertension.
             </p>
+
+            <p>
+                Please read about my prior work below!
+            </p>
         </div>
 
         <!-- Point-of-Care Platelet Counting to Better Manage Bleeding-Related Disorders -->
         <div class="panel" contenteditable="true">
             <h2>Point-of-Care Platelet Counting to Better Manage Bleeding-Related Disorders</h2>
-            <div class="iframe-container">
-                <iframe src="https://ashpublications.org/blood/article/142/Supplement%201/5453/505742/Design-and-Performance-of-a-Low-Cost-Portable" frameborder="0" allowfullscreen></iframe>
-            </div>
+            <img id="athelas-one" src="athelas_one.png" alt="athelas-one">
+            <p>
+                For patients facing ongoing low platelet levels, we developed a new portable platelet counter offering convenient at-home monitoring, reducing the need for frequent hospital visits and improving overall quality of life.
+                Read more about it in <a href="https://ashpublications.org/blood/article/142/Supplement%201/5453/505742/Design-and-Performance-of-a-Low-Cost-Portable" target="_blank">our publication</a>  in the journal Blood!
+            </p>
         </div>
     </main>
 </body>
